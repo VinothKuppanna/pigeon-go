@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subscription</title>
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Catamaran:400,600,900&display=swap">
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        .sheet {
+            max-height: 80%;
+            width: 80%;
+            max-width: 80%;
+            background-color: #FFFFFF;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 64px;
+            padding-bottom: 64px;
+        }
+
+        .pigeon {
+            max-height: 52px;
+            text-align: center;
+            margin-right: 16px;
+        }
+
+        .pigeon .text {
+            height: 52px;
+            color: #3773F5;
+            font-family: Catamaran, "Catamaran", sans-serif;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 52px;
+        }
+
+        .hello {
+            height: 48px;
+            color: #374354;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 24px;
+            text-align: center;
+            margin-top: 42px;
+        }
+
+        .confirm-email {
+            margin-top: 32px;
+            height: 66px;
+            color: #364462;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+        }
+
+        .confirm-email .email {
+            color: #3773F5;
+        }
+
+        .verify {
+            height: 40px;
+            width: 210px;
+            border-radius: 27px;
+            background-color: #3773F5;
+            border-color: transparent;
+            outline: none;
+            cursor: pointer;
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+            margin-top: 32px;
+        }
+
+        .verify:hover {
+            background-color: rgba(55, 115, 245, 0.75);
+        }
+
+        .verify.text {
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        .site {
+            height: 20px;
+            max-height: 20px;
+            color: #3773F5;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            display: block;
+            margin-top: 46px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="sheet">
+    <div class="pigeon">
+        <img src="https://firebasestorage.googleapis.com/v0/b/pigeon-website.appspot.com/o/assets%2Fpigeon_logo.png?alt=media&token=0ffb4201-78ee-4652-a88a-dd0077dab497">
+        <span class="text">Pigeon</span>
+    </div>
+    <div class="hello">Hello!<br>Thank you for your interest.</div>
+    <div class="confirm-email">Please click button below to verify your email.
+    </div>
+    <a href="{{ .Link }}" target="_blank">
+        <button class="verify text">Verify Email Address
+        </button>
+    </a>
+    <a href="https://getpigeon.com" class="site">getpigeon.com</a>
+</div>
+</body>
+</html>

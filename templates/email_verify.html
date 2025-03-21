@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subscription</title>
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+        }
+
+        .sheet {
+            background-color: #FFFFFF;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 64px;
+            padding-bottom: 64px;
+        }
+
+        .pigeon {
+            max-height: 35px;
+            margin-right: 16px;
+        }
+
+        .pigeon img {
+            width: 45px;
+            height: 35px;
+        }
+
+        .pigeon .text {
+            height: 35px;
+            color: #3773F5;
+            font-family: Roboto, sans-serif;
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+        .hello {
+            margin-top: 52px;
+            height: 64px;
+            color: #374354;
+            font-family: Roboto, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 32px;
+        }
+
+        .confirm-email {
+            margin-top: 23px;
+            height: 66px;
+            width: 327px;
+            color: #364462;
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        .confirm-email .email {
+            color: #3773F5;
+        }
+
+        .verify {
+            height: 40px;
+            width: 256px;
+            border-radius: 27px;
+            background-color: #3773F5;
+            border-color: transparent;
+            outline: none;
+            cursor: pointer;
+            display: block;
+            margin-top: 32px;
+        }
+
+        .verify:hover {
+            background-color: rgba(55, 115, 245, 0.75);
+        }
+
+        .verify.text {
+            color: #FFFFFF;
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .footer {
+            color: #364462;
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+            line-height: 22px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="sheet">
+    <div class="pigeon">
+        <img src="https://firebasestorage.googleapis.com/v0/b/pigeon-website.appspot.com/o/assets%2Fpigeon_logo.png?alt=media&token=0ffb4201-78ee-4652-a88a-dd0077dab497"
+             alt="Pigeon Logo">
+        <span class="text">Pigeon</span>
+    </div>
+    <div class="hello">Hello!</div>
+    <div class="confirm-email">You have selected <span class="email">{{ .Email }}</span> to create your Pigeon account.
+        To confirm this email belongs to you, click below and create an account.
+    </div>
+    <a href="{{ .Link }}" target="_blank">
+        <button class="verify text">Confirm your email
+        </button>
+    </a>
+    <div class="footer">If you didn't request this message, you can safely ignore it.</div>
+    <div class="footer">Receiving an email that you didn't request doesn’t impact the security of your account. There’s
+        no need to worry and change your password, but you can let us know if you didn't make the request.
+    </div>
+    <div class="footer">Kind regards,<br><a href="mailto:{{ .SupportEmail }}">Pigeon Support</a></div>
+</div>
+</body>
+</html>

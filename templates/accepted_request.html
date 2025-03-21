@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request accepted</title>
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .sheet {
+            background-color: white;
+            padding-top: 64px;
+            padding-bottom: 64px;
+        }
+
+        .pigeon {
+            margin-right: 16px;
+        }
+
+        .pigeon-logo {
+            width: 120px;
+            height: 35px;
+        }
+
+        .request {
+            margin-top: 52px;
+            color: #374354;
+            font-family: Roboto, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: 32px;
+        }
+
+        .main-text {
+            margin-top: 32px;
+            min-height: 66px;
+            max-width: 460px;
+            color: #364462;
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        .main-text .name {
+            color: #3773F5;
+        }
+
+        .button {
+            height: 40px;
+            width: 256px;
+            border-radius: 27px;
+            background-color: #3773F5;
+            border-color: transparent;
+            outline: none;
+            cursor: pointer;
+            display: block;
+            margin-top: 32px;
+        }
+
+        .button:hover {
+            background-color: rgba(55, 115, 245, 0.75);
+        }
+
+        .button.text {
+            color: #FFFFFF;
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="sheet">
+    <div class="pigeon">
+        <img src="https://firebasestorage.googleapis.com/v0/b/pigeon-website.appspot.com/o/assets%2Fpigeon_logo_email.png?alt=media&token=cdba14f3-fb63-4c34-a51d-842588d49f7f"
+             class="pigeon-logo" alt="pigeon logo">
+    </div>
+    <div class="request">Request accepted</div>
+    <div class="main-text">Hello <span class="name">{{ .AssociateName }}</span>,
+        <br>
+        <br>
+        A new case has been created at <span class="name">{{ .BusinessName }}</span> for the request that you or one of
+        your group members recently accepted. Check your
+        Pigeon account to access your latest cases and interactions, or click the link below.
+    </div>
+    <a href="{{ .RequestLink }}" target="_blank">
+        <button class="button text">Open Case
+        </button>
+    </a>
+    <div class="main-text">This is an automatically generated email. If you have any questions,
+        do not hesitate to contact your administrator or Pigeon Support Team.
+    </div>
+    <div class="main-text">Kind regards,<br><a href="mailto:{{ .SupportEmail }}">Pigeon Support</a></div>
+</div>
+</body>
+</html>
